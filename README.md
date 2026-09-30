@@ -1,4 +1,8 @@
 # taller-postman-carabali
+# Taller de APIs y Postman
+**Estudiante:** Cristian Camilo Carabali
+**Código:** 1115418866
+**Asignatura:** Ingeniería de Software II — Cotecnova
 
 #### Marco Conceptual
 Qué significa que una API sea «REST»: REST es un patron de de diseño de APIs en la web, que permite que 2 programas se comuniquen entre si.
@@ -16,12 +20,13 @@ Fuente: (https://www.ibm.com/mx-es/think/topics/api-endpoint) ,(https://www.cont
 
 
 #### Metodos HTTP y el CRUD
-Método    Operación CRUD     Qué hace
-GET       Read               Solicita una representacion del recurso especificado
-POST      Create             Envia una entidad al recurso especificado 
-PUT       Update             Reemplaza todas las representaciones actuales del recurso destino por el contenido de la petición
-PATCH     Update             Aplica modificaciones parciales a un recurso
-DELETE    Delete             Elimina el recurso especificado
+| Método | Operación CRUD | Qué hace |
+|--------|-----------------|---------|
+| GET    | Read            | Solicita una representación del recurso especificado |
+| POST   | Create          | Envía una entidad al recurso especificado |
+| PUT    | Update          | Reemplaza todas las representaciones actuales del recurso destino por el contenido de la petición|
+| PATCH  | Update          | Aplica modificaciones parciales a un recurso |
+| DELETE | Delete          | Elimina el recurso especificado |
 Fuente: (https://developer.mozilla.org/es/docs/Web/HTTP/Reference/Methods)
 
 #### Las familias de códigos de estado
@@ -41,3 +46,17 @@ Ejemplo: 1xx - 100 Continue
 la diferencia clave es de quién es la responsabilidad del error. Un 4xx indica que el cliente cometió un error o pidió algo mal formado o inexistente. Un 5xx indica que el servidor falló al procesar una petición que en principio, estaba bien hecha entonces la responsabilidad es del backend, no de quien consume la API.
 
 Fuente: (https://developer.mozilla.org/es/docs/Web/HTTP/Reference/Status)
+
+## Cómo reproducir este taller
+1. Instala Postman desde postman.com/downloads
+2. Importa el archivo `coleccion.json` en Postman
+3. La colección "Taller-API" quedará disponible con todas las peticiones ya configuradas
+4. Ejecuta cada petición y revisa los resultados en la pestaña "Test Results" para ver las pruebas automáticas
+
+## Archivos de este repositorio
+- `README.md`: informe principal con el marco conceptual, métodos HTTP y códigos de estado
+- `hallazgos.md`: tabla de peticiones ejecutadas, resultados y análisis de cada una
+- `conclusiones.md`: respuestas a las preguntas abiertas (idempotencia, cabeceras, reflexión final)
+- `coleccion.json`: colección de Postman exportada, lista para importar
+- `evidencias/`: capturas de pantalla de las peticiones ejecutadas en Postman
+
