@@ -75,6 +75,30 @@ GET /posts/1/comments (ruta anidada)
 https://jsonplaceholder.typicode.com/posts/1/comments
 Codigo: 200
 Campos: PostId,id,name,email,body
+#### Escribe tu primera prueba automática
+¿Por qué es importante ver una prueba fallar antes de confiar en ella?
+Porque si nunca se ve fallar, no hay forma de saber si realmente está verificando algo o si simplemente siempre da verde sin comprobar nada . Al forzarla a fallar a propósito y confirmar que se pone en rojo, se demuestra que la prueba sí detecta problemas reales, y solo entonces se puede confiar en que un resultado verde significa que la respuesta realmente cumplió lo esperado.
 
+#### Escribe tus propias pruebas
+**Verifica que existe el campo title:** 
+```javascript
+pm.test("La respuesta contiene el campo title", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData).to.have.property("title");
+});
+```
+**Verifica que el tiempo de respuesta sea menor a 1000ms:**
+```javascript
+pm.test("El tiempo de respuesta es menor a 1000ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(1000);
+});
+```
+**Verifica que el campo id sea de tipo numero:**
+```javascript
+pm.test("El campo id es de tipo numero", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.id).to.be.a("number");
+});
+```
 
 
