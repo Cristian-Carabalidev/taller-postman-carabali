@@ -55,3 +55,26 @@ Respuesta PATCH:
     "title": "Titulo actualizado con PATCH",
     "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
 }
+
+#### Encuentra el límite
+¿cómo se llama ese tipo de caso de prueba?
+Este tipo de caso de prueba se llama prueba de valores límite, consiste en probar justo en el borde de un rango válido, el último valor que funciona y el primero que ya no.
+¿Por qué se dice que los defectos se concentran ahí?
+Los defectos se concentran ahí porque los errores de programación más comunes ocurren justamente en las condiciones que definen los límites de un rango. Probar valores muy alejados del límite raramente detecta este tipo de error; solo se detecta probando exactamente en el borde.
+
+#### Explora otros recursos
+Get /users
+https://jsonplaceholder.typicode.com/users
+Codigo: 200
+Campos: id, name, username,email,address,street,suite,city,zipcode, geo, lat, lng
+Get /albums
+https://jsonplaceholder.typicode.com/albums
+Codigo: 200
+Campos: UserId,id,tittle
+GET /posts/1/comments (ruta anidada)
+https://jsonplaceholder.typicode.com/posts/1/comments
+Codigo: 200
+Campos: PostId,id,name,email,body
+
+
+
